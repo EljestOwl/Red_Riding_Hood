@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
 
     public PlayerIdleState IdleState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
+    public PlayerJumpState JumpState { get; private set; }
+    public PlayerInAirState InAirState { get; private set; }
+    public PlayerLandState LandState { get; private set; }
 
     [SerializeField] private PlayerData _PlayerData;
     #endregion
@@ -18,6 +21,13 @@ public class Player : MonoBehaviour
     public Animator Animator {  get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
     public Rigidbody2D RB { get; private set; }
+    #endregion
+
+    #region Check Transforms
+
+    [SerializeField]
+    private Transform _groundCheckPoint;
+
     #endregion
 
     #region Other Variables
@@ -33,6 +43,9 @@ public class Player : MonoBehaviour
         StateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, StateMachine, _PlayerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, _PlayerData, "move");
+        JumpState = new PlayerJumpState(this, StateMachine, _PlayerData, "inAir");
+        InAirState = new PlayerInAirState(this, StateMachine, _PlayerData, "inAir");
+        LandState = new PlayerLandState(this, StateMachine, _PlayerData, "land");
     }
 
     private void Start()
@@ -60,15 +73,24 @@ public class Player : MonoBehaviour
     public void SetVelocityX(float velocity)
     {
         _workspace.Set(velocity, curretVelocity.y);
+        RB.velocity = _workspace;
+        curretVelocity = _workspace;
     }
 
     public void SetVelocityY(float velocity)
     {
         _workspace.Set(curretVelocity.x, velocity);
+        RB.velocity = _workspace;
+        curretVelocity = _workspace;
     }
     #endregion
 
     #region Check Functions
+    public bool CheckIfGrounded()
+    {
+        return Physics2D.OverlapCircle(_groundCheckPoint.position, _PlayerData.groundCheckRadius, _PlayerData.whatIsGround);
+    }
+
     public void CheckIfShouldFlip(int xInput)
     {
         if (xInput != 0 && xInput != FacingDiraction)
@@ -79,6 +101,8 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Other Funktions
+    private void AnimationTrigger() => StateMachine.currentState.AnimationTrigger();
+    private void AnimationFinishTrigger() => StateMachine.currentState.AnimationFinishTrigger();
     private void Flip()
     {
         FacingDiraction *= -1;

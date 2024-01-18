@@ -10,6 +10,7 @@ public class PlayerState : MonoBehaviour
     protected PlayerData playerData;
 
     protected float startTime;
+    protected bool isAnimationFinished;
 
     private string _animBoolName;
 
@@ -26,6 +27,7 @@ public class PlayerState : MonoBehaviour
         DoChecks();
         player.Animator.SetBool(_animBoolName, true);
         startTime = Time.time;
+        isAnimationFinished = false;
     }
 
     public virtual void Exit()
@@ -47,4 +49,11 @@ public class PlayerState : MonoBehaviour
     {
 
     }
+
+    public virtual void AnimationTrigger()
+    {
+
+    }
+
+    public virtual void AnimationFinishTrigger() => isAnimationFinished = true;
 }
