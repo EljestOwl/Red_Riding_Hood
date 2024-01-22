@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     #region Components
     public Animator Animator {  get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
-    public Rigidbody2D RB { get; private set; }
+    public Rigidbody2D rb2D { get; private set; }
     #endregion
 
     #region Check Transforms
@@ -31,8 +31,8 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Other Variables
-    public Vector2 curretVelocity { get; private set; }
     public int FacingDiraction {  get; private set; }
+    public Vector2 curretVelocity { get; private set; }
 
     private Vector2 _workspace;
     #endregion
@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         StateMachine = new PlayerStateMachine();
+
         IdleState = new PlayerIdleState(this, StateMachine, _PlayerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, _PlayerData, "move");
         JumpState = new PlayerJumpState(this, StateMachine, _PlayerData, "inAir");
@@ -50,16 +51,18 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        StateMachine.Initialize(IdleState);
         Animator = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
+        rb2D.GetComponent<Rigidbody2D>();
 
         FacingDiraction = 1;
+
+        StateMachine.Initialize(IdleState);
     }
 
     private void Update()
     {
-        curretVelocity = RB.velocity;
+        curretVelocity = rb2D.velocity;
         StateMachine.currentState.LogicUpdate();
     }
 
@@ -73,14 +76,14 @@ public class Player : MonoBehaviour
     public void SetVelocityX(float velocity)
     {
         _workspace.Set(velocity, curretVelocity.y);
-        RB.velocity = _workspace;
+        rb2D.velocity = _workspace;
         curretVelocity = _workspace;
     }
 
     public void SetVelocityY(float velocity)
     {
         _workspace.Set(curretVelocity.x, velocity);
-        RB.velocity = _workspace;
+        rb2D.velocity = _workspace;
         curretVelocity = _workspace;
     }
     #endregion

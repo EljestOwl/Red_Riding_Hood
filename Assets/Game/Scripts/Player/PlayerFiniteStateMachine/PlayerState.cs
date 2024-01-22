@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.AnimatedValues;
 using UnityEngine;
 
-public class PlayerState : MonoBehaviour
+public class PlayerState
 {
     protected Player player;
     protected PlayerStateMachine stateMachine;
@@ -28,6 +28,7 @@ public class PlayerState : MonoBehaviour
         player.Animator.SetBool(_animBoolName, true);
         startTime = Time.time;
         isAnimationFinished = false;
+        Debug.Log(_animBoolName);
     }
 
     public virtual void Exit()
