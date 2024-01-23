@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
-        rb2D.GetComponent<Rigidbody2D>();
+        rb2D = GetComponent<Rigidbody2D>();
 
         FacingDiraction = 1;
 
