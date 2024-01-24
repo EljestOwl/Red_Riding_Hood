@@ -10,6 +10,7 @@ public class PlayerInAirState : PlayerState
     private bool _jumpInputStop;
     private bool _coyoteTime;
     private bool _isJumping;
+    private bool _isTouchingWall;
     public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string _animBoolName) : base(player, stateMachine, playerData, _animBoolName)
     {
     }
@@ -19,6 +20,7 @@ public class PlayerInAirState : PlayerState
         base.DoChecks();
 
         _isGrounded = player.CheckIfGrounded();
+        _isTouchingWall = player.CheckIfTouchingWall();
     }
 
     public override void Enter()
@@ -49,18 +51,21 @@ public class PlayerInAirState : PlayerState
         }
         else if(_jumpInput && player.JumpState.CanJump())
         {
+            player.InputHandler.UseJumpInput();
             stateMachine.ChangeState(player.JumpState);
+        }
+        else if (_isTouchingWall && _xInput == player.FacingDiraction && player.curretVelocity.y <= 0f)
+        {
+            stateMachine.ChangeState(player.WallSlideState);
         }
         else
         {
             player.CheckIfShouldFlip(_xInput);
-
             player.SetVelocityX(playerData.movementVelocity * _xInput);
-
             player.Animator.SetFloat("yVelocity", player.curretVelocity.y);
             player.Animator.SetFloat("xVelocity", Mathf.Abs(player.curretVelocity.x));
         }
-        
+
     }
 
     public override void PhysicsUpdate()

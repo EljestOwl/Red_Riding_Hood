@@ -13,6 +13,10 @@ public class Player : MonoBehaviour
     public PlayerJumpState JumpState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
     public PlayerLandState LandState { get; private set; }
+    public PlayerWallSlideState WallSlideState { get; private set; }
+    public PlayerWallGrab WallGrabState { get; private set; }
+    public PlayerWallClimb WallClimbState { get; private set; }
+
 
     [SerializeField] private PlayerData _PlayerData;
     #endregion
@@ -25,8 +29,8 @@ public class Player : MonoBehaviour
 
     #region Check Transforms
 
-    [SerializeField]
-    private Transform _groundCheckPoint;
+    [SerializeField] private Transform _groundCheckPoint;
+    [SerializeField] private Transform _wallCheckPoint;
 
     #endregion
 
@@ -47,6 +51,9 @@ public class Player : MonoBehaviour
         JumpState = new PlayerJumpState(this, StateMachine, _PlayerData, "inAir");
         InAirState = new PlayerInAirState(this, StateMachine, _PlayerData, "inAir");
         LandState = new PlayerLandState(this, StateMachine, _PlayerData, "land");
+        WallSlideState = new PlayerWallSlideState(this, StateMachine, _PlayerData, "wallSlide");
+        WallGrabState = new PlayerWallGrab(this, StateMachine, _PlayerData, "wallGrab");
+        WallClimbState = new PlayerWallClimb(this, StateMachine, _PlayerData, "wallClimb");
     }
 
     private void Start()
@@ -94,6 +101,11 @@ public class Player : MonoBehaviour
         return Physics2D.OverlapCircle(_groundCheckPoint.position, _PlayerData.groundCheckRadius, _PlayerData.whatIsGround);
     }
 
+    public bool CheckIfTouchingWall()
+    {
+        return Physics2D.Raycast(_wallCheckPoint.position,Vector2.right*FacingDiraction, _PlayerData.wallCheckDistance, _PlayerData.whatIsGround);
+    }
+
     public void CheckIfShouldFlip(int xInput)
     {
         if (xInput != 0 && xInput != FacingDiraction)
@@ -110,6 +122,17 @@ public class Player : MonoBehaviour
     {
         FacingDiraction *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
+    #endregion
+
+    #region Gizmos
+    private void OnDrawGizmos()
+    {
+        // Draw GroundCheck:
+        Gizmos.DrawWireSphere(_groundCheckPoint.position, _PlayerData.groundCheckRadius);
+
+        // Draw WallCheck:
+        Gizmos.DrawLine(_wallCheckPoint.position, new Vector3(_wallCheckPoint.position.x + (_PlayerData.wallCheckDistance * FacingDiraction), _wallCheckPoint.position.y, 0));
     }
     #endregion
 
