@@ -14,7 +14,6 @@ public class Bardent : MonoBehaviour
     private float movementSpeed = 5f;
     [SerializeField]
     private float jumpForce = 10f;
-    private bool isJumping = false;
     private float groundCheckRadius = 0.2f;
     private bool isFacingRight;
     [SerializeField]

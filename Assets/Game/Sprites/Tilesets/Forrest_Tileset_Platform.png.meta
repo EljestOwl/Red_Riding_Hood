@@ -1,0 +1,955 @@
+fileFormatVersion: 2
+guid: 07e2f5afa58f3fd4f8accdee6203d392
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb58b3053f87442419c5ac1695f4c466
+      internalID: -1994528231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 5}
+        - {x: -7, y: -4}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 7, y: -4}
+        - {x: 7, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8b4a0bb96137c4191c6f6a4cc34719
+      internalID: 978097959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: -7, y: -7}
+        - {x: -7, y: -8}
+        - {x: 7, y: -8}
+        - {x: 7, y: -2}
+        - {x: 7, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f181c4e788f04e419e58c7466b56eee
+      internalID: 2060281852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: -7, y: -7}
+        - {x: -7, y: -8}
+        - {x: 7, y: -8}
+        - {x: 7, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b598354ac71dc1546a70bb4ad21c93de
+      internalID: 615538432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 8}
+        - {x: -7, y: -8}
+        - {x: 7, y: -8}
+        - {x: 7, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1edc92b3bdd2e49aed4b6e10d491ee
+      internalID: -626124096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 8}
+        - {x: -7, y: -8}
+        - {x: 7, y: -8}
+        - {x: 7, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28578cf08d11f69458438d0ae1774bcb
+      internalID: 1675162061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 13}
+        - {x: -8, y: 1}
+        - {x: 8, y: -15}
+        - {x: 8, y: -2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee1b6d6a600c3841bc3f76b70708588
+      internalID: -1507911188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 13}
+        - {x: -8, y: 1}
+        - {x: 8, y: -15}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5c42087702ac94d8c70ad3f2eb47a7
+      internalID: -384847118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 8}
+        - {x: -7, y: -8}
+        - {x: 7, y: -8}
+        - {x: 7, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6718e91b25a58d4a818c81dbc9a0596
+      internalID: -1695853637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_11
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: 0, y: -7}
+        - {x: 3, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5280261e185cbd49bf10bfdae4935e4
+      internalID: 2106156336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: 0, y: -7}
+        - {x: 3, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bbf362a73a85149aa57afc456ece8b
+      internalID: -729774422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: 0, y: -7}
+        - {x: 3, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f6963ab4c420640881315d3b7e0a15
+      internalID: 1400872076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: 0, y: -7}
+        - {x: 3, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66aa5860c28a3b489741fdb22517b92
+      internalID: -1817617231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 8}
+        - {x: -7, y: 0}
+        - {x: -4, y: -2}
+        - {x: 4, y: -2}
+        - {x: 7, y: 0}
+        - {x: 7, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d6759f48354ea4b995173664994a8e
+      internalID: 891669064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 8}
+        - {x: -7, y: 4}
+        - {x: -6, y: -4}
+        - {x: 6, y: -4}
+        - {x: 7, y: 4}
+        - {x: 7, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4305b54328a12c45978845fc6202738
+      internalID: 1877115508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452ab68aea8260b408762b7315685652
+      internalID: 1904249515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca4d023dcdfb3743ad177ba29680e0c
+      internalID: -940689346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ab6289952de7f47958f2fee34d6a31
+      internalID: 396881158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_20
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f578ccef3104c5448a8cdaa05a2d52d
+      internalID: -186221428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cd91877c166194eb6f208b0680e36f
+      internalID: 2041786488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -16, y: 13}
+        - {x: -16, y: 1}
+        - {x: 16, y: -15}
+        - {x: 16, y: -2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a913f2587be3c4b4f88f56067257f9a3
+      internalID: 1222356337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -16, y: 13}
+        - {x: -16, y: 1}
+        - {x: 16, y: -15}
+        - {x: 16, y: -2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f0f1aca67d19a4da7c6ccd30245fcc
+      internalID: 184279350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: -7, y: -7}
+        - {x: -7, y: -8}
+        - {x: 7, y: -8}
+        - {x: 7, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd00d6a6057922419de2333910b236f
+      internalID: 772728605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: -7, y: -7}
+        - {x: -7, y: -8}
+        - {x: 7, y: -8}
+        - {x: 7, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e406e43ed5e494aa1305a8191e88d2
+      internalID: 1507869638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 8}
+        - {x: -7, y: -3}
+        - {x: -4, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+        - {x: 7, y: 5}
+        - {x: 7, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6e8cdac445df4438cb05264c4ffc8f
+      internalID: 371481741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 8}
+        - {x: -7, y: -3}
+        - {x: -4, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+        - {x: 7, y: 5}
+        - {x: 7, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64faeb698a055bc4ab58f5fa24f6f4cd
+      internalID: -1278202723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 8}
+        - {x: -7, y: -3}
+        - {x: -4, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+        - {x: 7, y: 5}
+        - {x: 7, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae2f403acab9e94aa5b179b0154d246
+      internalID: -1759663585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7, y: 5}
+        - {x: 7, y: 8}
+        - {x: -7, y: 8}
+        - {x: -7, y: 5}
+        - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: -7, y: -7}
+        - {x: -7, y: -8}
+        - {x: 7, y: -8}
+        - {x: 7, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b552728dfabad1948b9938625325db43
+      internalID: 1734962998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7, y: 5}
+        - {x: 7, y: 8}
+        - {x: -7, y: 8}
+        - {x: -7, y: 5}
+        - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe34a11b742755e41975c57857e0eb4f
+      internalID: -1698474479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forrest_Tileset_Platform_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7, y: 5}
+        - {x: 7, y: 8}
+        - {x: -7, y: 8}
+        - {x: -7, y: 5}
+        - {x: -8, y: 5}
+        - {x: -8, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2b1b670032a954ea265df19d8f553e
+      internalID: -436559136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Forrest_Tileset_Platform_0: -1994528231
+      Forrest_Tileset_Platform_1: 978097959
+      Forrest_Tileset_Platform_10: -1695853637
+      Forrest_Tileset_Platform_11: 2106156336
+      Forrest_Tileset_Platform_12: -729774422
+      Forrest_Tileset_Platform_13: 1400872076
+      Forrest_Tileset_Platform_14: -1817617231
+      Forrest_Tileset_Platform_15: 891669064
+      Forrest_Tileset_Platform_16: 1877115508
+      Forrest_Tileset_Platform_17: 1904249515
+      Forrest_Tileset_Platform_18: -940689346
+      Forrest_Tileset_Platform_19: 396881158
+      Forrest_Tileset_Platform_2: 2060281852
+      Forrest_Tileset_Platform_20: -186221428
+      Forrest_Tileset_Platform_21: 2041786488
+      Forrest_Tileset_Platform_22: 772728605
+      Forrest_Tileset_Platform_23: 1507869638
+      Forrest_Tileset_Platform_24: -1759663585
+      Forrest_Tileset_Platform_25: 1734962998
+      Forrest_Tileset_Platform_26: -1698474479
+      Forrest_Tileset_Platform_27: 1222356337
+      Forrest_Tileset_Platform_28: -436559136
+      Forrest_Tileset_Platform_29: 184279350
+      Forrest_Tileset_Platform_3: 615538432
+      Forrest_Tileset_Platform_4: -626124096
+      Forrest_Tileset_Platform_5: 371481741
+      Forrest_Tileset_Platform_6: -1278202723
+      Forrest_Tileset_Platform_7: 1675162061
+      Forrest_Tileset_Platform_8: -1507911188
+      Forrest_Tileset_Platform_9: -384847118
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
