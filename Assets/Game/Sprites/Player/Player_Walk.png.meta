@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 87cfb7b75d54ab84aa5d5e6ab8923004
+guid: 04f790eebc88da145a706328dbe00d5c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RedRidingHood_Run_0
+      name: Player_Walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2009cc5b35d47c488a8f2d8c9b9ab88
-      internalID: -1239187712
+      spriteID: 00b2c004546ad654cb8576609f6fdeda
+      internalID: -1763963936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedRidingHood_Run_1
+      name: Player_Walk_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbcbd6237df535f4b886c7077131dbc0
-      internalID: -558614480
+      spriteID: 846db251cfbfa2c4b959a953a33f1698
+      internalID: -1112548887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedRidingHood_Run_2
+      name: Player_Walk_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4ef9f8bfa4c98040ab1e1705e83e21b
-      internalID: 1341947374
+      spriteID: 8b29de900881e50468f67d440a7e2502
+      internalID: -714596666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedRidingHood_Run_3
+      name: Player_Walk_3
       rect:
         serializedVersion: 2
         x: 96
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78ca4eca7c74f974da449ba9762d4930
-      internalID: -1270137430
+      spriteID: 6ba012ad17931324b8be1d1ba71c5459
+      internalID: 1581006098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedRidingHood_Run_4
+      name: Player_Walk_4
       rect:
         serializedVersion: 2
         x: 128
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a921d2675e59b5f4b94ba04d76bfd5c7
-      internalID: -1293533193
+      spriteID: 616aa29a19f28d84c8b22ed1ffe31402
+      internalID: -1440954500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedRidingHood_Run_5
+      name: Player_Walk_5
       rect:
         serializedVersion: 2
         x: 160
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b20b75b430c96e6479c14a4e02463157
-      internalID: -546805105
+      spriteID: 31e342d514d256045af1414a57bb5164
+      internalID: 320937130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedRidingHood_Run_6
+      name: Player_Walk_6
       rect:
         serializedVersion: 2
         x: 192
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f851b5b1abf0a354f826475985fa4161
-      internalID: -694637446
+      spriteID: 48d56bf1cdb503f488977ca4a6b20c90
+      internalID: -2134276950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedRidingHood_Run_7
+      name: Player_Walk_7
       rect:
         serializedVersion: 2
         x: 224
@@ -271,8 +271,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97556433ce034f5479d790d46ade645e
-      internalID: 670668444
+      spriteID: 550d26e82083c694d8d3434fe85ab4b0
+      internalID: 2008304380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd050ac3e3f48d843a003af4bd794b26
+      internalID: -1515374269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Walk_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b025a7db00ddc04189092f2adba764c
+      internalID: -97200826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ef14fc85a5bbf47882d0c6c12dfed8
+      internalID: 328358954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccca578629ddda44abdbc6155c1118b
+      internalID: -760823081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Walk_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5e804d13012f0439abca69b5f6af12
+      internalID: -1233810285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Walk_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8af7f5e255522d47bd53c051cb8fe05
+      internalID: -947307514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Walk_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e157ec607dde1a3419aacd27dda7b3b8
+      internalID: 497672513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Walk_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc52760d1ad27e4aaa2dc00b84e2e4e
+      internalID: -1384773639
       vertices: []
       indices: 
       edges: []
@@ -288,14 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RedRidingHood_Run_0: -1239187712
-      RedRidingHood_Run_1: -558614480
-      RedRidingHood_Run_2: 1341947374
-      RedRidingHood_Run_3: -1270137430
-      RedRidingHood_Run_4: -1293533193
-      RedRidingHood_Run_5: -546805105
-      RedRidingHood_Run_6: -694637446
-      RedRidingHood_Run_7: 670668444
+      Player_Walk_0: -1763963936
+      Player_Walk_1: -1112548887
+      Player_Walk_10: 328358954
+      Player_Walk_11: -760823081
+      Player_Walk_12: -1233810285
+      Player_Walk_13: -947307514
+      Player_Walk_14: 497672513
+      Player_Walk_15: -1384773639
+      Player_Walk_2: -714596666
+      Player_Walk_3: 1581006098
+      Player_Walk_4: -1440954500
+      Player_Walk_5: 320937130
+      Player_Walk_6: -2134276950
+      Player_Walk_7: 2008304380
+      Player_Walk_8: -1515374269
+      Player_Walk_9: -97200826
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

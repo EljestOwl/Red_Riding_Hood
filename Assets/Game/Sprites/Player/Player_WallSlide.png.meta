@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d0fe76ec47b924048ac209ff2f295eac
+guid: f3cbb8e9aed4bde41b7e73d1d1957c7b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RedRidingHood_Idle_0
+      name: Player_WallSlide_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 349cb794328212b409bc8d65b0a6e74d
-      internalID: -1068582625
+      spriteID: 4e60082b7096c514b99581b5b32e2ce1
+      internalID: 1429785927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedRidingHood_Idle_1
+      name: Player_WallSlide_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c7ff85b300ac194c993f71976e7017b
-      internalID: -170173655
+      spriteID: 5d9a3e139d5a4df47a656b136777966c
+      internalID: -108047371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedRidingHood_Idle_2
+      name: Player_WallSlide_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e1962a323f06eb43b9feb67824d6dd3
-      internalID: 54355109
+      spriteID: 49b84d213a3aac14fa00339a58af0040
+      internalID: 364689729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedRidingHood_Idle_3
+      name: Player_WallSlide_3
       rect:
         serializedVersion: 2
         x: 96
@@ -187,29 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 966c8c32ed2d3db4c8a644ceeec2bb2b
-      internalID: 1244665033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedRidingHood_Idle_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efb4f95080d7d1b4380230ca33e4cbe8
-      internalID: -1422721246
+      spriteID: 214f1bb1db6799d4283e35ce6cdb7282
+      internalID: 1422976787
       vertices: []
       indices: 
       edges: []
@@ -225,11 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RedRidingHood_Idle_0: -1068582625
-      RedRidingHood_Idle_1: -170173655
-      RedRidingHood_Idle_2: 54355109
-      RedRidingHood_Idle_3: 1244665033
-      RedRidingHood_Idle_4: -1422721246
+      Player_WallSlide_0: 1429785927
+      Player_WallSlide_1: -108047371
+      Player_WallSlide_2: 364689729
+      Player_WallSlide_3: 1422976787
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
