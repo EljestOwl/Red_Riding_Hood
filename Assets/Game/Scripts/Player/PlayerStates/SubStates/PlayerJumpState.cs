@@ -22,6 +22,8 @@ public class PlayerJumpState : PlayerAbilityState
         DecreseAmountOfJumpesLeft();
 
         player.InAirState.SettIsJumping();
+
+        player.rb2D.sharedMaterial.friction = 0f;
     }
 
     public bool CanJump()

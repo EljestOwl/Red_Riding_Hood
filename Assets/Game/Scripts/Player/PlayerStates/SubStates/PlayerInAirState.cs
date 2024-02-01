@@ -26,6 +26,8 @@ public class PlayerInAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
+
+        player.rb2D.sharedMaterial.friction = 0f;
     }
 
     public override void Exit()

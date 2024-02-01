@@ -24,6 +24,8 @@ public class PlayerGroundedState : PlayerState
     {
         base.Enter();
 
+        player.rb2D.sharedMaterial.friction = playerData.frictionOnGround;
+
         player.JumpState.ResetAmountOfJumpesLeft();
     }
 
