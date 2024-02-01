@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManagerScript : MonoBehaviour
 {
     public static GameManagerScript instance;
-
+    
     public bool altMusic = false;
 
     private string _currentLevel;

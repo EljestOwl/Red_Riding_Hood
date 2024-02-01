@@ -20,7 +20,7 @@ MonoBehaviour:
   variableJumpHeightMultiplier: 0.5
   wallSlideVelocity: -2
   groundCheckRadius: 0.19
-  wallCheckDistance: 0.4
+  wallCheckDistance: 0.25
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128
