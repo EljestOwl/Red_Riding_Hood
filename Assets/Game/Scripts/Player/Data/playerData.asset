@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   frictionOnGround: 1
-  movementVelocity: 9
+  movementVelocity: 8
   jumpVelocity: 19
   amountOfJumps: 1
-  coyoteTime: 0.3
+  coyoteTime: 0.25
   variableJumpHeightMultiplier: 0.5
-  wallSlideVelocity: -2
+  wallSlideVelocity: -3
   groundCheckRadius: 0.19
   wallCheckDistance: 0.25
   whatIsGround:

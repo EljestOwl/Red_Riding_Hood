@@ -21,7 +21,7 @@ public class PlayerJumpState : PlayerAbilityState
 
         DecreseAmountOfJumpesLeft();
 
-        player.InAirState.SettIsJumping();
+        player.InAirState.SetIsJumping();
     }
 
     public bool CanJump()

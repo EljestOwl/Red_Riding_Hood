@@ -51,7 +51,7 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.LandState);
         }
-        else if(_jumpInput && player.JumpState.CanJump())
+        else if (_jumpInput && player.JumpState.CanJump())
         {
             player.InputHandler.UseJumpInput();
             stateMachine.ChangeState(player.JumpState);
@@ -105,7 +105,7 @@ public class PlayerInAirState : PlayerState
         _coyoteTime = true;
     }
 
-    public void SettIsJumping()
+    public void SetIsJumping()
     {
         _isJumping = true;
     }
