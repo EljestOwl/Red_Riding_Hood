@@ -1,112 +1,123 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInAirState : PlayerState
 {
-    private bool _isGrounded;
-    private int _xInput;
-    private bool _jumpInput;
-    private bool _jumpInputStop;
-    private bool _coyoteTime;
-    private bool _isJumping;
-    private bool _isTouchingWall;
-    public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string _animBoolName) : base(player, stateMachine, playerData, _animBoolName)
-    {
-    }
+	private bool _isGrounded;
+	private int _xInput;
+	private bool _jumpInput;
+	private bool _jumpInputStop;
+	private bool _coyoteTime;
+	private bool _isJumping;
+	private bool _isTouchingWall;
 
-    public override void DoChecks()
-    {
-        base.DoChecks();
+	private float _playerFallYPosStart;
+	private float _playerFallYPosEnd;
+	public float fallHight;
+	public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string _animBoolName) : base(player, stateMachine, playerData, _animBoolName)
+	{
+	}
 
-        _isGrounded = player.CheckIfGrounded();
-        _isTouchingWall = player.CheckIfTouchingWall();
-    }
+	public override void DoChecks()
+	{
+		base.DoChecks();
 
-    public override void Enter()
-    {
-        base.Enter();
+		_isGrounded = player.CheckIfGrounded();
+		_isTouchingWall = player.CheckIfTouchingWall();
+	}
 
-        player.rb2D.sharedMaterial.friction = 0f;
-    }
+	public override void Enter()
+	{
+		base.Enter();
 
-    public override void Exit()
-    {
-        base.Exit();
-    }
+		fallHight = 0;
+		_playerFallYPosStart = player.transform.position.y;
 
-    public override void LogicUpdate()
-    {
-        base.LogicUpdate();
+		player.rb2D.sharedMaterial.friction = 0f;
+	}
 
-        CheckCoyoteTime();
+	public override void Exit()
+	{
+		base.Exit();
 
-        _xInput = player.InputHandler.NormInputX;
-        _jumpInput = player.InputHandler.jumpInput;
-        _jumpInputStop = player.InputHandler.jumpInputStop;
+		_playerFallYPosEnd = player.transform.position.y;
+	}
 
-        CheckJumpMultiplier();
+	public override void LogicUpdate()
+	{
+		base.LogicUpdate();
 
-        if (_isGrounded && player.curretVelocity.y < 0.01f)
-        {
-            stateMachine.ChangeState(player.LandState);
-        }
-        else if (_jumpInput && player.JumpState.CanJump())
-        {
-            player.InputHandler.UseJumpInput();
-            stateMachine.ChangeState(player.JumpState);
-        }
-        else if (_isTouchingWall && _xInput == player.FacingDiraction && player.curretVelocity.y <= 0f)
-        {
-            stateMachine.ChangeState(player.WallSlideState);
-        }
-        else
-        {
-            player.CheckIfShouldFlip(_xInput);
-            player.SetVelocityX(playerData.movementVelocity * _xInput);
-            player.Animator.SetFloat("yVelocity", player.curretVelocity.y);
-            player.Animator.SetFloat("xVelocity", Mathf.Abs(player.curretVelocity.x));
-        }
+		CheckCoyoteTime();
 
-    }
+		_xInput = player.InputHandler.NormInputX;
+		_jumpInput = player.InputHandler.jumpInput;
+		_jumpInputStop = player.InputHandler.jumpInputStop;
 
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
-    }
+		CheckJumpMultiplier();
 
-    private void CheckJumpMultiplier()
-    {
-        if (_isJumping)
-        {
-            if (_jumpInputStop)
-            {
-                player.SetVelocityY(player.curretVelocity.y * playerData.variableJumpHeightMultiplier);
-                _isJumping = false;
-            }
-            else if (player.curretVelocity.y <= 0f)
-            {
-                _isJumping = false;
-            }
-        }
-    }
+		if (_isGrounded && player.curretVelocity.y < 0.01f)
+		{
+			fallHight = _playerFallYPosStart - _playerFallYPosEnd;
+			stateMachine.ChangeState(player.LandState);
+		}
+		else if (_jumpInput && player.JumpState.CanJump())
+		{
+			player.InputHandler.UseJumpInput();
+			stateMachine.ChangeState(player.JumpState);
+		}
+		else if (_isTouchingWall && _xInput == player.FacingDiraction && player.curretVelocity.y <= 0f)
+		{
+			stateMachine.ChangeState(player.WallSlideState);
+		}
+		else
+		{
+			player.CheckIfShouldFlip(_xInput);
+			player.SetVelocityX(playerData.movementVelocity * _xInput);
+			player.Animator.SetFloat("yVelocity", player.curretVelocity.y);
+			player.Animator.SetFloat("xVelocity", Mathf.Abs(player.curretVelocity.x));
+		}
 
-    private void CheckCoyoteTime()
-    {
-        if (_coyoteTime && Time.time > startTime + playerData.coyoteTime)
-        {
-            _coyoteTime = false;
-            player.JumpState.DecreseAmountOfJumpesLeft();
-        }
-    }
+	}
 
-    public void StartCoyoteTime()
-    {
-        _coyoteTime = true;
-    }
+	public override void PhysicsUpdate()
+	{
+		base.PhysicsUpdate();
+	}
 
-    public void SetIsJumping()
-    {
-        _isJumping = true;
-    }
+	private void CheckJumpMultiplier()
+	{
+		if (_isJumping)
+		{
+			if (_jumpInputStop)
+			{
+				player.SetVelocityY(player.curretVelocity.y * playerData.variableJumpHeightMultiplier);
+				_isJumping = false;
+			}
+			else if (player.curretVelocity.y <= 0f)
+			{
+				_isJumping = false;
+			}
+		}
+	}
+
+	private void CheckCoyoteTime()
+	{
+		if (_coyoteTime && Time.time > startTime + playerData.coyoteTime)
+		{
+			_coyoteTime = false;
+			player.JumpState.DecreseAmountOfJumpesLeft();
+		}
+	}
+
+	public void StartCoyoteTime()
+	{
+		_coyoteTime = true;
+	}
+
+	public void SetIsJumping()
+	{
+		_isJumping = true;
+	}
 }

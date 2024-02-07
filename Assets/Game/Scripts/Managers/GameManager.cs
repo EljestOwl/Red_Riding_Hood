@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManagerScript : MonoBehaviour
 {
 	public static GameManagerScript instance;
-	
+
 	public bool altMusic = false;
 
 	private string _currentLevel;
@@ -28,15 +28,15 @@ public class GameManagerScript : MonoBehaviour
 
 	private void Start()
 	{
-		PlayStartMusic();
+		initializeLevel();
 	}
-	
+
 	public void ChangeScene(string newScene)
 	{
 		SceneManager.LoadScene(newScene);
 	}
-	
-	private void PlayStartMusic()
+
+	private void initializeLevel()
 	{
 		switch (_currentLevel)
 		{
