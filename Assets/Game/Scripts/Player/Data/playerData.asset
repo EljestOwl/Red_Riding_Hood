@@ -16,6 +16,8 @@ MonoBehaviour:
   movementVelocity: 8
   jumpVelocity: 19
   amountOfJumps: 1
+  maxFallVelocity: 5
+  maxFallDistance: 18
   coyoteTime: 0.25
   variableJumpHeightMultiplier: 0.5
   wallSlideVelocity: -3

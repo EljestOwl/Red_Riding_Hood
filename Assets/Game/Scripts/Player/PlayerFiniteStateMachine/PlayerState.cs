@@ -29,7 +29,7 @@ public class PlayerState
         player.Animator.SetBool(_animBoolName, true);
         startTime = Time.time;
         isAnimationFinished = false;
-        Debug.Log(_animBoolName);
+        // Debug.Log(_animBoolName);
         isExetingState = false;
     }
 

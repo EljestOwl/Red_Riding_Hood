@@ -15,7 +15,6 @@ public class PlayerLandState : PlayerGroundedState
 		{
 			stateMachine.ChangeState(player.DeathFallState);
 		}
-
 	}
 
 	public override void LogicUpdate()

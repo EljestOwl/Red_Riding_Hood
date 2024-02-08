@@ -1,13 +1,16 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
 	public static GameManagerScript instance;
+	[SerializeField] private GameObject _gameOverUI;
+	[SerializeField] private TextMeshProUGUI _deathText;
 
 	public bool altMusic = false;
 
-	private string _currentLevel;
+	[HideInInspector] public string currentLevel;
 
 	private void Awake()
 	{
@@ -23,7 +26,7 @@ public class GameManagerScript : MonoBehaviour
 
 		DontDestroyOnLoad(gameObject);
 
-		_currentLevel = SceneManager.GetActiveScene().name;
+		currentLevel = SceneManager.GetActiveScene().name;
 	}
 
 	private void Start()
@@ -38,7 +41,7 @@ public class GameManagerScript : MonoBehaviour
 
 	private void initializeLevel()
 	{
-		switch (_currentLevel)
+		switch (currentLevel)
 		{
 			case "Level1":
 				AudioMangagerScript.instance.PlaySound("Level1");
@@ -60,5 +63,16 @@ public class GameManagerScript : MonoBehaviour
 				AudioMangagerScript.instance.PlaySound("Level1");
 				break;
 		}
+	}
+
+	public void GameOver(string causeOfDeath)
+	{
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		player.GetComponent<PlayerInputHandler>().enabled = false;
+
+		_deathText.text = causeOfDeath;
+
+		Time.timeScale = 0.5f;
+		_gameOverUI.SetActive(true);
 	}
 }

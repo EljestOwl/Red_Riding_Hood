@@ -42,7 +42,10 @@ public class PlayerInAirState : PlayerState
 	{
 		base.Exit();
 
+		// Calculate Distance Fallen:
 		_playerFallYPosEnd = player.transform.position.y;
+		fallHight = _playerFallYPosStart - _playerFallYPosEnd;
+		Debug.Log("Fall Height: " + fallHight);
 	}
 
 	public override void LogicUpdate()
@@ -59,7 +62,6 @@ public class PlayerInAirState : PlayerState
 
 		if (_isGrounded && player.curretVelocity.y < 0.01f)
 		{
-			fallHight = _playerFallYPosStart - _playerFallYPosEnd;
 			stateMachine.ChangeState(player.LandState);
 		}
 		else if (_jumpInput && player.JumpState.CanJump())

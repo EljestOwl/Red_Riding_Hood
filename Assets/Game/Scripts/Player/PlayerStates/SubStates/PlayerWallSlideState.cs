@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class PlayerWallSlideState : PlayerTouchingWallState
 {
-    public PlayerWallSlideState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string _animBoolName) : base(player, stateMachine, playerData, _animBoolName)
-    {
-    }
+	public PlayerWallSlideState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string _animBoolName) : base(player, stateMachine, playerData, _animBoolName)
+	{
+	}
 
-    public override void LogicUpdate()
-    {
-        base.LogicUpdate();
+	public override void Enter()
+	{
+		base.Enter();
 
-        player.SetVelocityY(playerData.wallSlideVelocity);
-    }
+		player.InAirState.fallHight = 0;
+	}
+
+
+	public override void LogicUpdate()
+	{
+		base.LogicUpdate();
+
+		player.SetVelocityY(playerData.wallSlideVelocity);
+	}
 }

@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour
 	public bool diractionLookEnabled;
 
 	private Path _path;
-	private Vector2 _direction;
+	private Vector3 _direction;
 	private int _facingDirection = 1;
 	private int _currentWaypoint = 0;
 	Seeker _seeker;
@@ -59,7 +59,7 @@ public class EnemyAI : MonoBehaviour
 	}
 	private void CalculateDirection()
 	{
-		_direction = ((Vector2)_path.vectorPath[_currentWaypoint] - _rb.position).normalized;
+		_direction = (_path.vectorPath[_currentWaypoint] - new Vector3(_rb.position.x, _rb.position.y, 0)).normalized;
 	}
 
 	private void Movement()
@@ -86,7 +86,7 @@ public class EnemyAI : MonoBehaviour
 		}
 
 		// Reached end of path
-		if (_currentWaypoint >= _path.vectorPath.Count)
+		if (_currentWaypoint >= _path.vectorPath.Count - 1)
 		{
 			return;
 		}
@@ -138,6 +138,23 @@ public class EnemyAI : MonoBehaviour
 	private bool CheckIfGrounded()
 	{
 		return Physics2D.OverlapBox(_groundCheckTransform.position, _groundCheckSize, 0, _groundLayerMask);
+	}
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag("Player"))
+		{
+			// Get player
+			Player _player = other.GetComponent<Player>();
+
+			// Wolf nolonger followes player
+			followEnabled = false;
+			JumpEnabled = false;
+			diractionLookEnabled = false;
+
+			// Change player state
+			_player.StateMachine.ChangeState(_player.DeathWolfState);
+		}
 	}
 
 	private void OnDrawGizmos()

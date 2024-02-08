@@ -17,6 +17,7 @@ public class ChangeEnemyStatsTrigger : MonoBehaviour
 	[SerializeField] bool _JumpEnabled = true;
 	[SerializeField] bool _diractionLookEnabled = true;
 	[SerializeField] bool _gameObjectEnabled = true;
+	[SerializeField] bool _flipY = false;
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
@@ -52,6 +53,11 @@ public class ChangeEnemyStatsTrigger : MonoBehaviour
 			if (_entity.activeSelf && !_gameObjectEnabled)
 			{
 				_entity.SetActive(false);
+			}
+
+			if (_flipY)
+			{
+				_entity.GetComponent<SpriteRenderer>().flipY = true;
 			}
 		}
 	}

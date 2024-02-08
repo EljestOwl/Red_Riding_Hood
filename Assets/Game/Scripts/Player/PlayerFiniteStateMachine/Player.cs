@@ -59,8 +59,8 @@ public class Player : MonoBehaviour
 		InAirState = new PlayerInAirState(this, StateMachine, _PlayerData, "inAir");
 		LandState = new PlayerLandState(this, StateMachine, _PlayerData, "land");
 		WallSlideState = new PlayerWallSlideState(this, StateMachine, _PlayerData, "wallSlide");
-		DeathFallState = new PlayerDeathFallState(this, StateMachine, _PlayerData, "DeathFall");
-		DeathWolfState = new PlayerDeathWolfState(this, StateMachine, _PlayerData, "DeathWolf");
+		DeathFallState = new PlayerDeathFallState(this, StateMachine, _PlayerData, "deathFall");
+		DeathWolfState = new PlayerDeathWolfState(this, StateMachine, _PlayerData, "deathWolf");
 	}
 
 	private void Start()
